@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .login {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .loginbox {
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        display: flex;
+        border-radius: 50px;
+        box-shadow: 5px 10px #888888;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        margin: 10px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    button {
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <section class="login">
+        <div class="loginbox">
+            <form action="">
+                <h1>Sign up box</h1>
+                <Label>Username</Label>
+                <input type="text" name="" id="sign-username">
+                <Label>Password</Label>
+                <input type="password" id="sign-password">
+                <button type="button" onclick="signUp()">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="./login.js">
+
+</script>
+
+</html>
