@@ -715,38 +715,55 @@
       }
 
       .list-container li {
-        --img-1: url("ima/dac-san-sapa-7.jpg");
-        --img-2: url("ima/di-lich-cao-nguyen-moc-chau-1.jpg");
-        --img-3: url("ima/pho-den-long-hoi-an-01_1628228734.jpg");
-        --img-4: url("ima/cach-lam-banh-chung-thom-ngon-xanh-deo-dam-da-huong-vi-tet-202209011455226787-1674230031915423470577.jpg");
-        --img-5: url("ima/khu-du-lich-viet-nam-1.jpg");
+  width: 30%;
+  height: 500px;
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: all 500ms ease;
+}
 
-        &:nth-child(1) {
-          background-image: var(--img-1);
-        }
-        &:nth-child(2) {
-          background-image: var(--img-2);
-        }
-        &:nth-child(3) {
-          background-image: var(--img-3);
-        }
-        &:nth-child(4) {
-          background-image: var(--img-4);
-        }
-        &:nth-child(5) {
-          background-image: var(--img-5);
-        }
+.list-container li:nth-child(1) {
+  background-image: url("ima/dac-san-sapa-7.jpg");
+}
 
-        width: 30%;
-        height: 500px;
-        display: table-cell;
-        vertical-align: bottom;
-        position: relative;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        transition: all 500ms ease;
-      }
+.list-container li:nth-child(2) {
+  background-image: url("ima/di-lich-cao-nguyen-moc-chau-1.jpg");
+}
+
+.list-container li:nth-child(3) {
+  background-image: url("ima/pho-den-long-hoi-an-01_1628228734.jpg");
+}
+
+.list-container li:nth-child(4) {
+  background-image: url("ima/cach-lam-banh-chung-thom-ngon-xanh-deo-dam-da-huong-vi-tet-202209011455226787-1674230031915423470577.jpg");
+}
+
+.list-container li:nth-child(5) {
+  background-image: url("ima/khu-du-lich-viet-nam-1.jpg");
+}
+
+@media (max-width: 768px) {
+  .list-container, .list-container ul {
+    width: 100%;
+    display: block;
+  }
+
+  .list-container li {
+    width: 100%;
+    display: block;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .list-container:hover li,
+  .list-container li:hover {
+    width: 100%; /* Prevents the hover effect from changing the width */
+  }
+}
+
 
       .list-container li div a {
         display: block;
