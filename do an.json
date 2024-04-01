@@ -1,0 +1,79 @@
+{
+  "foodItems": [
+    {
+      "title": "Most delicious food at Northen Vietnam",
+      "details": [
+        {
+          "name": "Pho",
+          "image": "ima/top-vietnamese-dishes-2_2.jpg",
+          "description": "Phở is the quintessential Vietnamese dish, the word phở referring to the type of noodle used in the recipe. Flat rice noodles dance around with medium-rare slivers of beef or boiled chicken in a hearty beef stock. The more popular of the two widely known varieties is phở Hanoi. Originally from the north, it is distinguished by a clear broth and dressed only with a squeeze of lemon and slices of bird’s eye chili. The southern iteration, phở Nam, has a murkier broth and is served with a bouquet of fresh herbs like bean sprouts, basil and mint.",
+          "priceReference": "Approximately 100,000 - 200,000 Vietnamese Dong per serving.",
+          "recommendedLocation": "Pho Thin, 13 Lo Duc, Hai Ba Trung District in Hanoi or Pho Hoa, 260C Pasteur Street, District 3 in Ho Chi Minh City"
+        },
+        {
+          "name": "Be Chao Moc Chau",
+          "image": "ima/Be chao.jpg",
+          "description": "This is a specialty dish made from male calf meat, raised and grazed on the highland meadows of Northwest Vietnam. The crispy, puffed skin, tender meat, and aromatic seasoning make for a delightful combination. Served alongside slices of lemongrass and ginger, it becomes even more perfect.",
+          "priceReference": "Approximately 100,000 - 200,000 Vietnamese Dong per serving.",
+          "recommendedLocation": "Quan 70 Com Pho Be Chao - Phieng Luong, Moc Chau, Son La, Vietnam."
+        },
+        {
+          "name": "Fried Cicadas",
+          "image": "ima/ve sau.jpg",
+          "description": "This is a delicacy crafted from fried quail, a bird renowned for its tender meat and distinct flavor. The dish features impeccably crispy skin that gives way to succulent, flavorful quail meat. The delectable taste is enhanced by aromatic spices, creating a perfect harmony of flavors and textures. Served with a side of fresh herbs and tangy dipping sauce, it's an exquisite culinary experience.",
+          "priceReference": "Typically ranges from 100,000 to 200,000 Vietnamese Dong per serving.",
+          "recommendedLocation": "Quan 70 Fried Quail - Phieng Luong, Moc Chau, Son La, Vietnam."
+        },
+        {
+          "name": "Fried Moole Crickets",
+          "image": "ima/boxit.jpg",
+          "description": "Savor the exquisite taste of crispy fried mole crickets, a local delicacy that promises a unique culinary adventure. These meticulously prepared insects offer a satisfying crunch, revealing tender and flavorful meat inside. Enhanced with a blend of aromatic spices, each bite is a symphony of flavors that lingers on the palate. Accompanied by delicate fresh herbs and a zesty dipping sauce, this dish delivers a one-of-a-kind gastronomic experience.",
+          "priceReference": "Typically priced between 80,000 to 150,000 Vietnamese Dong per serving.",
+          "recommendedLocation": "Mole Cricket Delights Corner, nestled in the heart of Phieng Luong, Moc Chau, Son La, Vietnam."
+        },
+        {
+          "name": "Thang Co",
+          "image": "ima/thangco.jpg",
+          "description": "\"Thang Co\" horse stew is a longstanding delicacy of the Northwest region in Vietnam. This specialty is crafted from horse organs, fresh vegetables, and simmered bones, cooked together with a blend of distinctive spices. Hang Co features a deep color, a slightly rich and bitter taste, and is best enjoyed when served hot. It is particularly beloved by the H'Mong ethnic community.",
+          "priceReference": "Approximately 80,000 - 100,000 Vietnamese Dong per bowl.",
+          "recommendedLocation": "Hang Co LyLy Bac Ha - Nâm Cay 1 Hamlet, Bac Ha Town, Bac Ha District, Lao Cai Province."
+        },
+        {
+          "name": "Nam Pia",
+          "image": "ima/Nampia.jpg",
+          "description": "Similar to \"Thang Co,\" \"Nam Pia\" is also a traditional dish cherished by the Thai ethnic community in the Northwest region of Vietnam. Nam Pia is a popular dipping sauce for grilled meat, made from the heart and young intestines of animals (mostly goat, buffalo, or cow), which are simmered until tender. Nam Pia boasts an initial spicy, salty, and slightly bitter taste followed by a sweet aftertaste.",
+          "priceReference": "Approximately 30,000 - 50,000 Vietnamese Dong per bowl.",
+          "recommendedLocation": "Thai village in Moc Chau, where Nam Pia is authentically prepared and enjoyed."
+        },
+        {
+          "name": "Buffalo Skin Salad",
+          "image": "ima/nomdatrau.jpg",
+          "description": "Buffalo skin salad, a specialty of the Thai ethnic group in Son La, stands out for its unique blend of flavors. What distinguishes this dish is not the usual sourness from vinegar or lime, but rather the use of fermented bamboo shoot juice. This bamboo shoot juice tenderizes the buffalo skin, giving it a delightful crispiness and preventing any overwhelming richness. This exquisite combination has resulted in an exceptional delicacy that lingers in the memory of visitors to the Northwest.",
+          "priceReference": "Approximately 50,000 - 100,000 Vietnamese Dong per plate.",
+          "recommendedLocation": "Thai villages in Moc Chau, where this dish is authentically prepared and savored."
+        },
+        {
+          "name": "Wild Buffalo Meat",
+          "image": "ima/trảuung.jpg",
+          "description": "Wild buffalo hung over the fireplace is a renowned specialty of the Northwest region that every visitor must try and consider bringing home as a gift. Revered as a national delicacy of the Northwest, the wild buffalo dish truly encapsulates a distinctive flavor. The buffalo meat selected is typically from the lean muscle, ensuring a firm and delicious texture. Simultaneously, the meat is hung over the fireplace and smoked alongside mac khen seeds. Over time, the meat becomes evenly cooked and acquires a natural, unique aroma.",
+          "priceReference": "Approximately 850,000 Vietnamese Dong per kilogram.",
+          "recommendedLocation": "261 Lu Ba Street, Dai Tu, Thai Nguyen, Vietnam."
+        },
+        {
+          "name": "Northwest Glutinous Rice",
+          "image": "ima/riceeee.jpg",
+          "description": "Northwest glutinous rice is a product that travelers should consider purchasing as a gift for their families and loved ones. This glutinous rice variety boasts long, slender grains that, when turned into dishes like sticky rice, become incredibly aromatic and delightfully chewy.",
+          "priceReference": "Approximately 34,000 Vietnamese Dong per kilogram.",
+          "recommendedLocation": "Various shops and grocery stores in Dien Bien."
+        },
+        {
+          "name": "Che",
+          "image": "ima/cehg.jpg",
+          "description": "Chè is a sweet dessert, served either hot or cold and in the form of a pudding or dessert soup. Cold chè is filled with jellied ingredients and tropical fruits such as bananas, mangoes and longan, usually doused in coconut cream. Always a textural adventure, you'll be surprised to encounter coconut shreds, crushed ice, lotus seed and jellies in these syrupy snacks. The beautiful three-coloured dessert, chè ba màu is often called the rainbow dessert. This is a layered spectacle of red beans, mashed mung beans and pandan jelly, topped with crushed ice and coconut milk.",
+          "priceReference": "Approximately 20,000 Vietnamese Dong per bowl.",
+          "recommendedLocation": "Che 95, 95 Hang Bac, Hoan Kiem, Hanoi"
+        }
+      ]
+    }
+  ]
+}

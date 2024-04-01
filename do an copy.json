@@ -1,0 +1,80 @@
+{
+  "foodItems": [
+    {
+      "title": "Top best way to protect the environment",
+      "details": [
+        {
+          "name": "Reduce, reuse, recycle",
+          "image": "https://img.freepik.com/premium-vector/reduce-reuse-recycle-symbol-set-red-blue-green-icons-white-background-collection_340258-20.jpg?w=1380",
+          "description": "This is the mantra of waste management.",
+          "priceReference": "Reduce the amount of waste you generate by buying less, choosing reusable products, and composting food scraps.",
+          "recommendedLocation": "Reuse items whenever possible, such as using old jars for storage or giving clothes to a charity shop. Recycle paper, plastic, glass, and metal according to your local guidelines. "
+        },
+        {
+          "name": "Conserve water",
+          "image": "https://www.thespruceeats.com/thmb/4Uxr_CKC7aR-UhEicIvVqLaiO0k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-488636063-5ab2dbd8a8ff48049cfd36e8ad841ae5.jpg",
+          "description": "Water is a precious resource, so use it wisely.",
+          "priceReference": "Take shorter showers, fix leaky faucets, water your lawn only when needed, and use a water-efficient washing machine and dishwasher. ",
+          "recommendedLocation": "Water delve into the various ways we utilize water in our daily lives, from drinking and sanitation to agriculture and energy production."
+        },
+        {
+          "name": "Save energy",
+          "image": "https://bcp.cdnchinhphu.vn/344443456812359680/2023/6/9/energy-saving-1686297818526250724159.jpg",
+          "description": "Energy conservation is another important way to protect the environment.",
+          "priceReference": "Turn off lights and electronics when you're not using them, unplug chargers when they're not in use, and switch to energy-efficient LED light bulbs.",
+          "recommendedLocation": "Consider using public transportation, biking, or walking whenever possible. "
+        },
+        {
+          "name": "Eat less meat",
+          "image": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2022-08/pic_use_no_meat.png.jpg?itok=PkqrqOyu",
+          "description": "Meat production is a major contributor to greenhouse gas emissions, deforestation, and water pollution",
+          "priceReference": "Try to eat less meat, especially red meat, and choose plant-based protein sources like beans, lentils, and tofu more often. ",
+          "recommendedLocation": "The health benefits of reducing your meat consumption are significant. Eating less meat has been found to decrease the chances of developing certain cancers, heart disease, stroke, diabetes, kidney disease, liver disease or lung disease."
+        },
+        {
+          "name": "Use eco-friendly products",
+          "image": "https://www.zenpack.us/blog/wp-content/uploads/2021/11/recycling-symbols3-1920x1024.jpeg",
+          "description": "Choose products that are made from recycled materials or that are biodegradable.",
+          "priceReference": "Avoid products that contain harmful chemicals, such as pesticides and herbicides..",
+          "recommendedLocation": "Look for products with the EPA's Green Seal or USDA Certified Organic label. "
+        },
+        {
+          "name": "Support sustainable businesses",
+          "image": "https://scandasia.com/wp-content/uploads/2023/05/BOI.jpeg",
+          "description": "Choose to support businesses that are committed to environmental sustainability",
+          "priceReference": "Look for companies that use renewable energy, reduce their waste, and source their materials responsibly. ",
+          "recommendedLocation": "The word 'business environment' indicates the aggregate total of all people, organisations and other forces that are outside the power of industry but that may affect its production."
+        },
+        {
+          "name": "Get involved in your community",
+          "image": "https://i.pinimg.com/564x/fa/8f/1e/fa8f1e682dcae1bc8e09077ce09a7980.jpg",
+          "description": "There are many ways to get involved in environmental protection in your community.",
+          "priceReference": "Join a local environmental group, volunteer for a cleanup day, or contact your elected officials about environmental issues. ",
+          "recommendedLocation": "Humans need to interact with the environment to obtain our food, water, fuel, medicines, building materials and many other things. Advances in science and technology have helped us to exploit the environment for our benefit, but we have also introduced pollution and caused environmental damage."
+        },
+        {
+          "name": "Educate others",
+          "image": "https://www.brushwithbamboo.com/wp-content/uploads/2021/11/care-for-the-environment.jpg",
+          "description": "One of the best ways to protect the environment is to educate others about the importance of environmental protection. ",
+          "priceReference": "Talk to your friends and family about the things you're doing to help the environment, and encourage them to do the same. ",
+          "recommendedLocation": "Unfortunately, humans have not been very good stewards of the Earth over the years. To protect the environment and preserve the planet for our children and future generations, we all need to take proactive steps toward cleaner living habits."
+        },
+        {
+          "name": "Plant trees",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtcgs9Qt6WNhfeJjQ7BCFdvVC28yyjmz5LQiUgYdUWYm34_vXKtXs5fMI-MVst",
+          "description": "Trees are essential for a healthy planet. They provide us with oxygen, clean the air, and help to combat climate change.",
+          "priceReference": " Plant a tree in your yard, or donate to a tree-planting organization. ",
+          "recommendedLocation": "Forests provide jobs to over 1.6 billion people, absorb harmful carbon from the atmosphere, and are key ingredients in 25% of all medicines. Have you ever taken an Aspirin? It comes from the bark of a tree!"
+        },
+        {
+          "name": "Be a responsible consumer",
+          "image": "https://ila.edu.vn/wp-content/uploads/2023/12/ila-cau-truc-responsible-6.jpeg",
+          "description": "When you make choices about what to buy, consider the environmental impact of your purchases. ",
+          "priceReference": "Choose products that are made from sustainable materials and that are packaged in recycled materials. Avoid products that contain harmful chemicals. ",
+          "recommendedLocation": "By taking these small steps, you can make a big difference in protecting the environment. Remember, every little bit counts!"
+        }
+        
+      ]
+    }
+  ]
+}

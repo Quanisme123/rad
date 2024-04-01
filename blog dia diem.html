@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <!-- Add Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/f9c32690d8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .wrapper12 {
+        width: 100%;
+        height: auto;
+        /* position: relative; */
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    nav {
+        width: 100%;
+        position: fixed;
+        z-index: 69;
+        top: 0;
+        left: 0;
+        padding: 20px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        border-bottom: 2px solid grey;
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+    }
+
+    nav .logo {
+        width: 80px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: grey;
+        font-size: 14px;
+    }
+
+    .dropdown {
+        position: absolute;
+        display: none;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        top: 60px;
+        left: -20px;
+        width: 200px;
+        text-align: left;
+    }
+
+    .dropdown li {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .dropdown li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .dropdown li a::before {
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid transparent;
+        border-right-color: #333;
+        border-bottom-color: #333;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .india .betterqual:hover .dropdown {
+        display: block;
+    }
+
+    .betterqual {
+        height: 100px;
+        align-items: center;
+        display: flex;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .betterqual:hover .navtit {
+        color: white;
+    }
+
+
+
+    .betterqual:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .ulqual {
+        margin-left: 20px;
+    }
+
+    .dropdown li a:hover {
+        text-decoration: underline;
+        background-color: white;
+
+    }
+
+    #searching {
+        width: 180px;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-left: 0px;
+
+
+    }
+
+    .background-buncha {
+        background-image: url('ima/Bà-Nà-2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Dancing Script', cursive;
+        display: flex;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .background-buncha .chubuncha {
+        font-size: 70px;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+
+    .background-buncha .chubuncha2 {
+        font-size: 20px;
+        color: white;
+        text-shadow: rgba(0, 0, 0, 1) 0.1em 0.1em 0.2em;
+        max-width: 60vw;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+
+
+    }
+
+    .outside {
+        background-color: #EBEBEB;
+        width: 99vw;
+
+
+    }
+
+    .wrapper {
+        width: 99vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        background-color: #EBEBEB;
+    }
+
+    .box {
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+
+
+    .textinbox {
+        font-family: 'Caveat', cursive;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        font-size: 35px;
+        z-index: 2;
+    }
+
+    .textinbox a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    .anhhanoi {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+
+    }
+
+    .box:hover .anhhanoi {
+        transform: scale(1.2);
+    }
+
+    .outside .h1so1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #B2910E;
+        padding-top: 31px;
+    }
+
+    .pso1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        border-bottom: 10px;
+    }
+
+    .background-buncha3 {
+        background-image: url('ima/images1089892_1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Dancing Script', cursive;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .anhvietnam-container {
+        width: 500px;
+        height: 625px;
+        position: relative;
+    }
+
+    .anhvietnam {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        left: -140px;
+        top: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .anhvietnam:last-child {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .anhvietnam-container:hover .anhvietnam:last-child {
+        opacity: 1;
+    }
+
+    .anhvietnam-container:hover .anhvietnam:first-child {
+        opacity: 0;
+    }
+
+    .blackviet {
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        opacity: 0.8;
+        font-family: 'Roboto', sans-serif;
+        padding: 10px 10px 50px;
+        text-align: left;
+
+
+
+    }
+
+    .blackviet p {
+        color: white;
+        font-size: 15px;
+        margin: 0 0 10px;
+        padding-left: 16px;
+
+    }
+
+    .blackviet h2 {
+        color: white;
+        font-size: 20px;
+        margin: 20px 0;
+        text-transform: uppercase;
+        padding-left: 16px;
+
+    }
+
+    .blackviet h5 {
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        margin: 10px 0;
+        padding-left: 16px;
+
+
+
+    }
+
+    .list1 {
+        margin: 0;
+        padding: 0;
+        max-width: 320px;
+        list-style: none;
+        box-sizing: border-box;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        padding-inline-start: 40px;
+
+    }
+
+    .list1 .item123 {
+        float: left;
+        width: 50%;
+        line-height: 24px;
+        padding-left: 16px;
+        position: relative;
+        box-sizing: border-box;
+
+
+    }
+
+    .list1 .item123::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 7px;
+        width: 8px;
+        height: 8px;
+        border: 1px solid transparent;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        transform: rotate(-45deg);
+
+
+
+    }
+
+    .list1 .item123 a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .list1 .item123 a:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .buncha3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*--blog--------------------------*/
+    #blog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-top: -50px;
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+    .blog-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .blog-heading span {
+        color: black;
+    }
+
+    .blog-heading h3 {
+        font-size: 2.4rem;
+        color: black;
+        font-weight: 600;
+    }
+
+    .blog-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+        flex-wrap: wrap;
+    }
+
+    .blog-box {
+        width: 300px;
+        background-color: white;
+        border: 1px solid black;
+        margin: 20px 20px;
+        text-align: center;
+
+    }
+
+    .blog-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .video-box-3 {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-box-3 video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100%;
+    }
+
+    .video-box-9 {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-box-9 video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100%;
+    }
+
+    .blog-text {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-text span {
+        color: black;
+        font-size: 0.9rem;
+    }
+
+    .blog-text .blog-title {
+        font-size: 1.3rem;
+        font-weight: bolder;
+        color: black;
+    }
+
+    .blog-text p {
+        color: black;
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 20px 0px;
+    }
+
+    .blog-text a {
+        color: black;
+    }
+
+    .blog-text a:hover {
+        color: #c74242;
+        transition: all ease 0.3s;
+    }
+
+
+    @media(max-width:1250px) {
+
+        .blog-box {
+            width: 300px;
+        }
+    }
+
+    @media(max-width:1100px) {
+        .blog-box {
+            width: 70%;
+        }
+    }
+
+    @media(max-width:550px) {
+
+        .blog-box {
+            margin: 20px 10px;
+            width: 100%;
+        }
+
+        #blog {
+            padding: 20px;
+        }
+    }
+
+    .blog-box .blog-img {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .blog-box .blog-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .ending {
+        background: url(https://vietnam.travel/themes/custom/vietnamtourism/images/bg-red-pattern.png) 50%;
+        background-size: 100px;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 250px;
+    }
+
+    .phan1 .Footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .phan1 .Footer a:hover {
+        text-decoration: underline;
+        color: #D3B22E;
+    }
+
+    .Footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        color: white;
+        line-height: 24px;
+        font-size: 15px;
+        height: 100px;
+
+    }
+
+
+    .phan2,
+    .phan3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        color: white;
+        font-size: 15px;
+        width: 180px;
+        text-align: center;
+    }
+
+
+
+    .phan2 h2,
+    .phan3 h2 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .phan2,
+    .phan3 {
+        margin-right: 20px;
+    }
+
+
+    .social {
+        display: flex;
+        justify-content: space-evenly;
+        width: 150px;
+        list-style: none;
+        margin-right: 0px;
+
+    }
+
+    #emailhehe {
+        width: 300px;
+        padding: 10px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        background-color: white;
+        margin-left: 20px;
+
+
+    }
+
+    #buttonhehe {
+        padding: 10px;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+        transition: 0.5s;
+        margin-left: 20px;
+
+
+    }
+
+    #buttonhehe:hover {
+        background-color: #9E0B0F;
+        border: 2px solid #D3B22E;
+        color: #D3B22E;
+        box-shadow: 0 0 5px #D3B22E,
+            0 0 25px #D3B22E,
+            0 0 50px #D3B22E,
+            0 0 100px #D3B22E;
+
+
+    }
+
+    .phan3 .social li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .phan3 .social li a:hover {
+        text-decoration: none;
+        color: #D3B22E;
+    }
+
+    .diachinha {
+        margin-top: 40px;
+        margin-bottom: 39px;
+
+    }
+
+
+    .phan1 .h2about {
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .chatbox {
+        width: 300px;
+        height: 250px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-family: 'Montserrat', sans-serif;
+        z-index: 999;
+        border-radius: 5px;
+        text-align: center;
+        transition: all 0.3s;
+        display: block;
+
+    }
+
+    .chatbox h2 {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+
+    .toggle-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+
+    .support {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 200px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #aibutton {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .aibutton {
+        display: none;
+    }
+
+    .aibutton2 {
+        display: none;
+    }
+
+    .aibutton3 {
+        display: none;
+    }
+
+    .aibutton4 {
+        display: none;
+    }
+
+    .aibutton5 {
+        display: none;
+    }
+
+    .aibutton6 {
+        display: none;
+    }
+
+    .aibutton7 {
+        display: none;
+    }
+
+    .aibutton8 {
+        display: none;
+    }
+
+    .aibutton9 {
+        display: none;
+    }
+
+    .aibutton10 {
+        display: none;
+    }
+
+    .show-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-family: 'Montserrat', sans-serif;
+        z-index: 999;
+        border-radius: 5px;
+        text-align: center;
+    }
+     #login {
+        width: 180px;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-left: 0px;
+        color: grey;
+    }
+
+    #login a:hover {
+        text-decoration: underline;
+
+    }
+  #userGreeting {
+      /* Your styles for the greeting message here */
+      color: #333; /* Change the color */
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif; /* Change the font-family */
+      overflow: hidden;
+        white-space: nowrap;
+                max-width: 140px;
+    position: relative; /* Để sử dụng ::after pseudo-element */
+    }
+
+    #userGreeting::after {
+        content: "..";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: white; /* Nền màu của văn bản */
+        padding: 0 4px; /* Khoảng cách xung quanh ".." */
+    }
+
+    /* Add the class for the link color */
+    #login a,
+    #userGreeting a {
+      color: grey;
+      text-decoration: none;
+    }
+
+    #logout {
+      width: 60px;
+      padding: 10px;
+      border: 2px solid grey;
+      border-radius: 5px;
+      font-size: 10px;
+      list-style: none;
+      display: inline-block;
+      margin-left: 10px;
+      color: grey;
+      transition: 0.4s;
+    }
+    #logout:hover{
+     color: white;
+    background-color: maroon ;
+
+    }
+
+
+</style>
+
+
+<body>
+   <section class="wrapper12">
+        <nav class="india">
+            <img src="ima/smallerx4.png" alt="logo">
+            <ul class="ulqual">
+                <div class="betterqual">
+                    <li><a href="dulichJSA10 copy.html" class="navtit">Home page</a></li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="blog dia diem.html" class="navtit">Best Places</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Son La</a></li>
+                            <li><a href="#">Ha Giang</a></li>
+                            <li><a href="#">Sapa</a></li>
+                            <li><a href="#">Ninh Binh</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="1.html" class="navtit">Best Foods</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Street Food</a></li>
+                            <li><a href="#">Popoular Food</a></li>
+                            <li><a href="#">Sapa</a></li>
+                            <li><a href="#">Ha Giang</a></li>
+                            <li><a href="#">Lai Chau</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="environment.html" class="navtit">Protect Environment</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Why to do?</a></li>
+                            <li><a href="#">How to do?</a></li>
+                            <li><a href="#">Join us now</a></li>
+                            <li><a href="#">Online helps</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="https://www.facebook.com/dangminhquan1307" class="navtit">About us</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our copyright</a></li>
+                            <li><a href="#">Contact for work</a></li>
+                            <li><a href="#">Contact us</a></li>
+
+                        </ul>
+                    </li>
+                </div>
+                <li><button id="login" onclick="login()"><a href="./signnug.html">Log In</a> | <a
+                            href="./sugnnew.html">Sign
+                            Up</a></button></li>
+                              <p id="userGreeting" style="display: none"></p>
+        <button id="logout" style="display: none">Log Out</button>
+
+            </ul>
+        </nav>
+
+    </section>
+    <div class="chatbox">
+        <button class="toggle-button">X</button>
+        <h1>Chat box</h1>
+        <div class="support">
+            <h2><span id="typing-text"></span></h2>
+            <div class="buttonforia">
+                <button id="aibutton" class="aibutton">Get started</button>
+                <button id="aibutton" class="aibutton2">Places Advices</button>
+                <button id="aibutton" class="aibutton3">Foods Advices</button>
+                <button id="aibutton" class="aibutton4">Sapa</button>
+                <button id="aibutton" class="aibutton5">Mai Chau</button>
+                <button id="aibutton" class="aibutton6">Ha Giang</button>
+                <button id="aibutton" class="aibutton7">Sapa</button>
+                <button id="aibutton" class="aibutton8">Mai Chau</button>
+                <button id="aibutton" class="aibutton9">Ha Giang</button>
+                <button id="aibutton" class="aibutton10">Go back</button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <button class="show-button">Show Chat</button>
+    <section class="background-buncha">
+        <div class="buncha">
+            <h1 class="chubuncha" style="margin-bottom: 0px;">Explore Viet Nam with the best</h1>
+            <p class="chubuncha2" style="margin-top: 5px;">Vietnam is a captivating destination that not only mesmerizes
+                travelers with its diverse landscapes and vibrant culture but also entices them with an array of
+                captivating tourist spots and attractions.</p>
+        </div>
+    </section>
+    <div class="outside">
+        <h1 class=h1so1>HERITAGE SITES</h1>
+        <p class="pso1" style="margin-bottom: 30px;">Take a tour of some of the country’s most compelling natural
+            wonders and cultural attractions right here.
+        </p>
+        <section class="wrapper">
+            <div class="box">
+                <h2 class="textinbox"><a href="second AMD.html">Mai Chau</a></h2>
+                <img class="anhhanoi" src="ima/di-lich-cao-nguyen-moc-chau-1.jpg" alt="">
+            </div>
+            <div class="box">
+                <h2 class="textinbox"><a href="second AMD.html">Ha Giang</a></h2>
+                <img class="anhhanoi" src="ima/du-lich-lang-son-13-2-2018-550x355.jpg" alt="">
+            </div>
+            <div class="box">
+                <h2 class="textinbox"><a href="second AMD.html">Sa pa</a></h2>
+                <img class="anhhanoi"
+                    src="ima/at_1-dac-diem-ve-cong-troi-sapa--anh-1_d6f76b787633f4afc1dcde90a6bb21e4.jpg" alt="">
+            </div>
+
+        </section>
+        <section class="background-buncha3" style="margin-top: 30px;">
+            <div class="buncha3">
+                <div class="anhvietnam-container">
+                    <img src="ima/done.png" alt="" class="anhvietnam">
+                    <img src="ima/done 3.png" alt="" class="anhvietnam">
+                </div>
+                <div class="blackviet">
+                    <h2>Northen VietNam</h2>
+                    <p>
+                        The north of Vietnam makes a statement with majestic mountain ranges, centuries-old rice
+                        terraces, and
+                        fascinating ethnic groups.
+                    </p>
+                    <h5 class="smalltitle">Top Destination</h5>
+                    <ul class="list1">
+                        <li class="item123"><a href="">Ha Noi</a></li>
+                        <li class="item123"><a href="">Sapa</a></li>
+                        <li class="item123"><a href="">Son La</a></li>
+                        <li class="item123"><a href="">Mai Chau</a></li>
+                        <li class="item123"><a href="">Ha Giang</a></li>
+                        <li class="item123"><a href="">Ninh Binh</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    </section>
+    <div class="outside">
+        <h1 class=h1so1>#VIETNAMYOUTUBE</h1>
+        <p class="pso1" style="margin-bottom: 30px;">Here are some of the most exceptional YouTubers in Vietnam who
+            specialize in showcasing the unique beauty of their
+            homeland
+        </p>
+        <section class="youtube">
+            <!--blog-section============================================================================-->
+            <section id="blog">
+                <!--container---------------->
+                <div class="blog-container">
+
+                    <!--box-1------------->
+                    <div class="blog-box">
+
+
+                        <div class="blog-img">
+                            <img src="ima/channels4_profile.jpg" alt="blog">
+                        </div>
+                        <!--text--->
+                        <div class="blog-text">
+                            <span>Ha Giang Expert</span>
+
+                            <a href="https://tastykitchen.vn/kham-pha-am-thuc/am-thuc-viet-nam-net-dac-sac-vung-mien-p55"
+                                class="blog-title">Ly Cong Ban</a>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!--box-2------------->
+                    <div class="blog-box">
+
+                        <!--img---->
+                        <div class="blog-img">
+                            <img src="ima/khoailangthang4_JPGV.jpg" alt="blog">
+                        </div>
+                        <!--text--->
+                        <div class="blog-text">
+                            <span>Hoa Binh Expert</span>
+                            <a href="https://www.klook.com/vi/blog/mon-an-duong-pho-viet-nam/" class="blog-title">Đinh
+                                Võ Hoài Phương</a>
+                        </div>
+
+                    </div>
+
+
+
+                    <!--box-3------------->
+                    <div class="blog-box">
+
+                        <!--img---->
+                        <div class="blog-img">
+                            <img src="ima/khaicp.jpg" alt="blog">
+                        </div>
+                        <!--text--->
+                        <div class="blog-text">
+                            <span>Son La Expert</span>
+                            <a href="https://www.facebook.com/profile.php?id=100005665240809" class="blog-title">Dang
+                                Quang Khai</a>
+
+                        </div>
+
+                    </div>
+                    <!--box-4------------->
+                    <div class="blog-box">
+
+                        <!--img---->
+                        <div class="blog-img">
+                            <img src="ima/tu-chang-ky-su-xay-dung-thanh-vlogger-cua-dan-ngheo.jpg" alt="blog">
+                        </div>
+                        <!--text--->
+                        <div class="blog-text">
+                            <span>Sapa Expert</span>
+                            <a href="https://www.traveloka.com/vi-vn/explore/destination/10-diem-vieng-chua-viet-nam-noi-tieng/58556"
+                                class="blog-title">Đinh
+                                Võ Hoài Phương</a>
+
+                        </div>
+
+                    </div>
+                    <!--box-5------------->
+                    <div class="blog-box">
+
+                        <!--img---->
+                        <div class="blog-img">
+                            <img src="ima/photo-3-1507510666189.jpg" alt="blog">
+                        </div>
+                        <!--text--->
+                        <div class="blog-text">
+                            <span>Ha Noi expert</span>
+                            <a href="https://dulichvietnam.com.vn/loat-toa-do-dia-diem-co-kinh-bac-nhat-viet-nam-hot-nhat-nhi-instagram.html"
+                                class="blog-title">Chloe Nguyen</a>
+
+                        </div>
+
+                    </div>
+                    <!--box-6------------->
+                    <div class="blog-box">
+
+                        <!--img---->
+                        <div class="blog-img">
+                            <img src="ima/10042f_a969344a46f44287948cf26f5dd5ca1e_mv2.png" alt="blog">
+                        </div>
+                        <!--text--->
+                        <div class="blog-text">
+                            <span>Ninh Binh expert</span>
+                            <a href="https://www.traveloka.com/vi-vn/explore/activities/cong-vien-giai-tri-acc/179142"
+                                class="blog-title">Vũ Trung Ninh </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="ending">
+                <div class="phan1">
+                    <ul class="Footer">
+                        <li>
+                            <h2 class="h2about">USEFUL LINKS</h2>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Video</a></li>
+                    </ul>
+                </div>
+                <div class="phan2">
+                    <h2 style="        margin-left: 20px;">NEWSLETTER</h2>
+                    <input type="text" name="" id="emailhehe" placeholder="Your Email Address">
+                    <button id="buttonhehe">SUBSCRIBE NOW</button>
+                </div>
+                <div class="phan3">
+                    <h2>CONTACT</h2>
+                    <p class="diachinha">9, Vũ Phạm Hàm, Cầu Giấy, Hà Nội, Việt Nam</p>
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/c/amd "> <i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+
+</body>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    // Code của bạn tại đây
+    checkLocalStorage(); // Gọi hàm này để kiểm tra localStorage khi DOM được load
+    // Các sự kiện và hàm khác tại đây
+});
+
+function checkLocalStorage() {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    const userGreeting = document.querySelector("#userGreeting");
+    const loginButton = document.querySelector("#login");
+    const logoutButton = document.querySelector("#logout");
+
+     // Xử lý sự kiện khi nút logout được click
+      logoutButton.addEventListener("click", function () {
+        localStorage.removeItem("loggedInUser"); // Xóa thông tin đăng nhập
+        userGreeting.style.display = "none"; // Ẩn greeting message
+        logoutButton.style.display = "none"; // Ẩn nút logout
+        loginButton.style.display = "inline-block"; // Hiển thị nút đăng nhập
+      });
+
+
+    if (loggedInUser) {
+        // Hiển thị thông tin người dùng đã đăng nhập
+        userGreeting.style.display = "flex";
+        userGreeting.innerHTML = `Hello, <a href="#">${loggedInUser}</a>`;
+        userGreeting.style.color = "grey";
+        logoutButton.style.display = "inline-block"; // Hiển thị nút logout
+        loginButton.style.display = "none"; // Ẩn nút đăng nhập nếu người dùng đã đăng nhập
+        console.log('runned');
+    }
+}
+
+
+        const toggleButton = document.querySelector('.toggle-button');
+        const showButton = document.querySelector('.show-button');
+        const chatbox = document.querySelector('.chatbox');
+        const aibutton = document.querySelector('.aibutton');
+        const aibutton2 = document.querySelector('.aibutton2');
+        const aibutton3 = document.querySelector('.aibutton3');
+        const aibutton4 = document.querySelector('.aibutton4');
+        const aibutton5 = document.querySelector('.aibutton5');
+        const aibutton6 = document.querySelector('.aibutton6');
+        const aibutton7 = document.querySelector('.aibutton7');
+        const aibutton8 = document.querySelector('.aibutton8');
+        const aibutton9 = document.querySelector('.aibutton9');
+        const aibutton10 = document.querySelector('.aibutton10');
+
+
+
+        const typingText = document.getElementById('typing-text');
+
+
+
+
+
+        toggleButton.addEventListener('click', () => {
+            showButton.style.display = 'flex';
+            chatbox.style.display = 'none';
+
+
+        });
+
+        showButton.addEventListener('click', () => {
+            showButton.style.display = 'none';
+            chatbox.style.display = 'block';
+
+        });
+
+        aibutton.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose the topic that you want";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton2.style.display = 'inline';
+                    aibutton3.style.display = 'inline';
+                }
+            }, 100);
+            aibutton.style.display = 'none';
+
+
+        });
+        window.onload = function () {
+            typingText.innerHTML = "";
+            const text = "Hello, how can I help you?";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton.style.display = 'inline';
+
+                }
+            }, 100);
+
+
+        };
+        aibutton2.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose a specific location";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton4.style.display = 'inline';
+                    aibutton5.style.display = 'inline';
+                    aibutton6.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton2.style.display = 'none';
+            aibutton3.style.display = 'none';
+
+
+
+        });
+        aibutton3.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose a specific cuisine";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton7.style.display = 'inline';
+                    aibutton8.style.display = 'inline';
+                    aibutton9.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton2.style.display = 'none';
+            aibutton3.style.display = 'none';
+
+
+
+        });
+        aibutton4.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Sapa, I recommend visiting Fansipan Mountain";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton5.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Mai Chau, I recommend visiting Pom Coong Village";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton6.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Ha Giang, I recommend visiting Dong Van Karst Plateau Geopark";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton7.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Sapa, I recommend trying Wild Buffalo Meat";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton8.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Mai Chau, I recommend trying Fried Cicadas";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton9.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Ha Giang, I recommend trying Nam Pia";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton10.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Hello, how can I help you?";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton10.style.display = 'none';
+
+        });
+ 
+
+
+  
+
+</script>
+
+</html>

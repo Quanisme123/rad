@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <title>AMD™</title>
+    <link rel="shortcut icon" href="ima/AMD_Arrows.svg" type="image/x-icon">
+    <!-- Add Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/f9c32690d8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .wrapper12 {
+        width: 100%;
+        height: auto;
+        /* position: relative; */
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    nav {
+        width: 100%;
+        position: fixed;
+        z-index: 69;
+        top: 0;
+        left: 0;
+        padding: 20px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        border-bottom: 2px solid grey;
+        background-color: rgb(255, 255, 255);
+        height: 100px;
+    }
+
+    nav .logo {
+        width: 80px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: grey;
+        font-size: 14px;
+    }
+
+    .dropdown {
+        position: absolute;
+        display: none;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        top: 60px;
+        left: -20px;
+        width: 200px;
+        text-align: left;
+    }
+
+    .dropdown li {
+        display: block;
+        padding: 10px 20px;
+    }
+
+    .dropdown li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .dropdown li a::before {
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid transparent;
+        border-right-color: #333;
+        border-bottom-color: #333;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .india .betterqual:hover .dropdown {
+        display: block;
+    }
+
+    .betterqual {
+        height: 100px;
+        align-items: center;
+        display: flex;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .betterqual:hover .navtit {
+        color: white;
+    }
+
+
+
+    .betterqual:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .ulqual {
+        margin-left: 20px;
+    }
+
+    .dropdown li a:hover {
+        text-decoration: underline;
+        background-color: white;
+    }
+
+    #searching {
+        width: 180px;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-left: 0px;
+
+
+    }
+
+    .background-buncha {
+        background-image: url('ima/goitom.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Dancing Script', cursive;
+        display: flex;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .background-buncha .chubuncha {
+        font-size: 70px;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+
+    .background-buncha .chubuncha2 {
+        font-size: 20px;
+        color: white;
+        text-shadow: rgba(0, 0, 0, 1) 0.1em 0.1em 0.2em;
+        max-width: 60vw;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+
+
+    }
+
+    .outside {
+        background-color: #EBEBEB;
+        width: 99vw;
+
+
+    }
+
+    .wrapper {
+        width: 99vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+        background-color: #EBEBEB;
+    }
+
+    .box {
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+
+
+    .textinbox {
+        font-family: 'Caveat', cursive;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        position: absolute;
+        font-size: 35px;
+        z-index: 2;
+    }
+
+    .textinbox a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    .anhhanoi {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+
+    }
+
+    .box:hover .anhhanoi {
+        transform: scale(1.2);
+    }
+
+    .outside .h1so1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #B2910E;
+        padding-top: 31px;
+    }
+
+    .pso1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        border-bottom: 10px;
+    }
+
+    .background-buncha3 {
+        background-image: url('ima/images1089892_1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Dancing Script', cursive;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .anhvietnam-container {
+        width: 500px;
+        height: 625px;
+        position: relative;
+    }
+
+    .anhvietnam {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        left: -140px;
+        top: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .anhvietnam:last-child {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .anhvietnam-container:hover .anhvietnam:last-child {
+        opacity: 1;
+    }
+
+    .anhvietnam-container:hover .anhvietnam:first-child {
+        opacity: 0;
+    }
+
+    .blackviet {
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        opacity: 0.8;
+        font-family: 'Roboto', sans-serif;
+        padding: 10px 10px 50px;
+        text-align: left;
+
+
+
+    }
+
+    .blackviet p {
+        color: white;
+        font-size: 15px;
+        margin: 0 0 10px;
+        padding-left: 16px;
+
+    }
+
+    .blackviet h2 {
+        color: white;
+        font-size: 20px;
+        margin: 20px 0;
+        text-transform: uppercase;
+        padding-left: 16px;
+
+    }
+
+    .blackviet h5 {
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        margin: 10px 0;
+        padding-left: 16px;
+
+
+
+    }
+
+    .list1 {
+        margin: 0;
+        padding: 0;
+        max-width: 320px;
+        list-style: none;
+        box-sizing: border-box;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        padding-inline-start: 40px;
+
+    }
+
+    .list1 .item123 {
+        float: left;
+        width: 50%;
+        line-height: 24px;
+        padding-left: 16px;
+        position: relative;
+        box-sizing: border-box;
+
+
+    }
+
+    .list1 .item123::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 7px;
+        width: 8px;
+        height: 8px;
+        border: 1px solid transparent;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        transform: rotate(-45deg);
+
+
+
+    }
+
+    .list1 .item123 a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .list1 .item123 a:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .buncha3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    .ending {
+        background: url(https://vietnam.travel/themes/custom/vietnamtourism/images/bg-red-pattern.png) 50%;
+        background-size: 100px;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 250px;
+    }
+
+    .phan1 .Footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .phan1 .Footer a:hover {
+        text-decoration: underline;
+        color: #D3B22E;
+    }
+
+    .Footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        color: white;
+        line-height: 24px;
+        font-size: 15px;
+        height: 100px;
+
+    }
+
+
+    .phan2,
+    .phan3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        color: white;
+        font-size: 15px;
+        width: 180px;
+        text-align: center;
+    }
+
+    .phan2 h2,
+    .phan3 h2 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .phan2,
+    .phan3 {
+        margin-right: 20px;
+    }
+
+
+    .social {
+        display: flex;
+        justify-content: space-evenly;
+        width: 150px;
+        list-style: none;
+        margin-right: 0px;
+
+    }
+
+    #emailhehe {
+        width: 300px;
+        padding: 10px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        background-color: white;
+
+
+    }
+
+    #buttonhehe {
+        padding: 10px;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+        transition: 0.5s;
+
+    }
+
+    #buttonhehe:hover {
+        background-color: #9E0B0F;
+        border: 2px solid #D3B22E;
+        color: #D3B22E;
+        box-shadow: 0 0 5px #D3B22E,
+            0 0 25px #D3B22E,
+            0 0 50px #D3B22E,
+            0 0 100px #D3B22E;
+
+
+    }
+
+    .phan3 .social li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .phan3 .social li a:hover {
+        text-decoration: none;
+        color: #D3B22E;
+    }
+
+    .diachinha {
+        margin-top: 40px;
+        margin-bottom: 39px;
+
+    }
+
+
+    .phan1 .h2about {
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+
+    .noidungdoan {
+        display: flex;
+        justify-content: center;
+        font-family: VNFGothamBold, Helvetica, Arial, sans-serif;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+
+    }
+
+    .doanhehe {
+        width: 50vw;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+    }
+
+    .chucngonmieng h2 {
+        line-height: 28px;
+        color: #848484;
+        margin-bottom: 10px;
+        font-family: Roboto;
+        font-weight: lighter;
+
+    }
+
+    .chucngonmieng {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 70vw;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        text-align: left;
+
+    }
+
+    .chucngonmieng2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px
+    }
+
+    .eatfont {
+        padding-bottom: 5px;
+    }
+
+    .doanhehe h2 {
+        color: maroon
+    }
+
+    .doanhehe p {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: VNFGothamBook, Helvetica, Arial, sans-serif;
+        color: #252525
+    }
+
+    .chatbox {
+        width: 300px;
+        height: 250px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-family: 'Montserrat', sans-serif;
+        z-index: 999;
+        border-radius: 5px;
+        text-align: center;
+        transition: all 0.3s;
+        display: block;
+
+    }
+
+    .chatbox h2 {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+
+    .toggle-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+
+    .support {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 200px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #aibutton {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .aibutton {
+        display: none;
+    }
+
+    .aibutton2 {
+        display: none;
+    }
+
+    .aibutton3 {
+        display: none;
+    }
+
+    .aibutton4 {
+        display: none;
+    }
+
+    .aibutton5 {
+        display: none;
+    }
+
+    .aibutton6 {
+        display: none;
+    }
+
+    .aibutton7 {
+        display: none;
+    }
+
+    .aibutton8 {
+        display: none;
+    }
+
+    .aibutton9 {
+        display: none;
+    }
+
+    .aibutton10 {
+        display: none;
+    }
+
+    .show-button {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-family: 'Montserrat', sans-serif;
+        z-index: 999;
+        border-radius: 5px;
+        text-align: center;
+    }
+     #login {
+        width: 180px;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-left: 0px;
+        color: grey;
+    }
+
+    #login a:hover {
+        text-decoration: underline;
+
+    }
+</style>
+
+
+<body>
+    <section class="wrapper12">
+        <nav class="india">
+            <img src="ima/smallerx4.png" alt="logo">
+            <ul class="ulqual">
+                <div class="betterqual">
+                    <li><a href="dulichJSA10.html" class="navtit">Home page</a></li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="blog dia diem.html" class="navtit">Best Places</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Son La</a></li>
+                            <li><a href="#">Ha Giang</a></li>
+                            <li><a href="#">Sapa</a></li>
+                            <li><a href="#">Ninh Binh</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="blog dia diem.html" class="navtit">Best Foods</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Street Food</a></li>
+                            <li><a href="#">Popoular Food</a></li>
+                            <li><a href="#">Sapa</a></li>
+                            <li><a href="#">Ha Giang</a></li>
+                            <li><a href="#">Lai Chau</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="environment.html" class="navtit">Protect Environment</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Why to do?</a></li>
+                            <li><a href="#">How to do?</a></li>
+                            <li><a href="#">Join us now</a></li>
+                            <li><a href="#">Online helps</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="betterqual">
+                    <li class="india">
+                        <a href="blog dia diem.html" class="navtit">About us</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Our copyright</a></li>
+                            <li><a href="#">Contact for work</a></li>
+                            <li><a href="#">Contact us</a></li>
+
+                        </ul>
+                    </li>
+                </div>
+                <li><button id="login" onclick="login()"><a href="./signnug.html">Log In</a> | <a
+                            href="./sugnnew.html">Sign
+                            Up</a></button></li>
+            </ul>
+        </nav>
+
+    </section>
+    <div class="chatbox">
+        <button class="toggle-button">X</button>
+        <h1>Chat box</h1>
+        <div class="support">
+            <h2><span id="typing-text"></span></h2>
+            <div class="buttonforia">
+                <button id="aibutton" class="aibutton">Get started</button>
+                <button id="aibutton" class="aibutton2">Places Advices</button>
+                <button id="aibutton" class="aibutton3">Foods Advices</button>
+                <button id="aibutton" class="aibutton4">Sapa</button>
+                <button id="aibutton" class="aibutton5">Mai Chau</button>
+                <button id="aibutton" class="aibutton6">Ha Giang</button>
+                <button id="aibutton" class="aibutton7">Sapa</button>
+                <button id="aibutton" class="aibutton8">Mai Chau</button>
+                <button id="aibutton" class="aibutton9">Ha Giang</button>
+                <button id="aibutton" class="aibutton10">Go back</button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <button class="show-button">Show Chat</button>
+    <section class="background-buncha">
+        <div class="buncha">
+            <h1 class="chubuncha" style="margin-bottom: 0px;">Try out the best Vietnamese food</h1>
+            <p class="chubuncha2" style="margin-top: 5px;">Vietnam is a captivating destination that not only mesmerizes
+                travelers with its diverse landscapes and vibrant culture but also entices them with an array of
+                captivating tourist spots and attractions.</p>
+        </div>
+    </section>
+    <div class="outside">
+        <h1 class=h1so1>VIETNAMESE FOOD</h1>
+        <p class="pso1" style="margin-bottom: 30px;"> Take a chance to taste the best food in Northen Vietnam with the
+            balance of sweet, sour, and salty.
+        </p>
+        <section class="wrapper">
+            <div class="box">
+                <h2 class="textinbox"><a href="second AMD.html">Mai Chau</a></h2>
+                <img class="anhhanoi" src="ima/pasted image 0.png" alt="">
+            </div>
+            <div class="box">
+                <h2 class="textinbox"><a href="second AMD.html">Ha Giang</a></h2>
+                <img class="anhhanoi" src="ima/dac-san-ha-giang-1-1024x684.jpg" alt="">
+            </div>
+            <div class="box">
+                <h2 class="textinbox"><a href="second AMD.html">Sa pa</a></h2>
+                <img class="anhhanoi" src="ima/dac-san-sapa-7.jpg" alt="">
+            </div>
+
+        </section>
+        <section class="chucngonmieng2">
+            <div class="chucngonmieng">
+                <h2>In Vietnam, before eating we say “Chúc ngon miệng!”-- meaning 'enjoy your meal' (but of course you
+                    will.)
+                </h2>
+                <h2>While Vietnamese cuisine abroad still flies under the banners of phở and bánh mì, the full spectrum
+                    of
+                    Vietnamese food
+                    is a symphony of delightfully textured, bright and piquant flavours.</h2>
+                <h2>The Vietnamese love their food and cooks make the most of each region's abundance produce and
+                    special
+                    ingredients to
+                    make their meals. Northern food is known for its simplicity; the dishes of central Vietnam are
+                    generous
+                    in spice and
+                    quantity; Southerners like to add sugar. Wherever you travel across the country, you're sure to eat
+                    well.</h2>
+
+            </div>
+        </section>
+        <section class="noidungdoan">
+            <div class="doanhehe">
+                <h1 class="eatfont">Most delicious food at Northen Vietnam</h1>
+                <h2 class="eatfont">1, Pho</h2>
+                <img src="ima/top-vietnamese-dishes-2_2.jpg" alt="" class="eatfont">
+                <p class="eatfont"><b>Phở</b> is the quintessential Vietnamese dish, the word phở referring to the type
+                    of
+                    noodle used in the recipe. Flat rice
+                    noodles dance around with medium-rare slivers of beef or boiled chicken in a hearty beef stock. The
+                    more popular of the
+                    two widely known varieties is phở Hanoi. Originally from the north, it is distinguished by a clear
+                    broth and dressed
+                    only with a squeeze of lemon and slices of bird’s eye chili. The southern iteration, phở Nam, has a
+                    murkier broth and is
+                    served with a bouquet of fresh herbs like bean sprouts, basil and mint.</p>
+                <p class="eatfont"> <b>The secret</b> to a good bowl of phở lies in its stock. The broth is usually
+                    infused with
+                    fragrant star anise, clove and
+                    cinnamon to lend a natural sweetness to the mix. This dish is found on almost every street corner
+                    and is actually
+                    consumed for breakfast, unbeknownst to outsiders.</p>
+                <p class="eatfont"><b>Recommended location:</b> Pho Thin, 13 Lo Duc, Hai Ba Trung District in Hanoi or
+                    Pho Hoa,
+                    260C Pasteur
+                    Street, District 3 in Ho Chi Minh
+                    City</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">2, Be Chao Moc Chau
+                </h2>
+                <img src="ima/Be chao.jpg" alt="" class="eatfont">
+                <p class="eatfont">This is a specialty dish made from <b>male calf meat</b>, raised and grazed on the
+                    highland
+                    meadows of Northwest Vietnam. The
+                    crispy, puffed skin, tender meat, and aromatic seasoning make for a delightful combination. Served
+                    alongside slices of
+                    lemongrass and ginger, it becomes even more perfect.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 100,000 - 200,000 Vietnamese Dong per serving.
+                </p>
+                <p class="eatfont"><b>Recommended location:</b> Quan 70 Com Pho Be Chao - Phieng Luong, Moc Chau, Son
+                    La,
+                    Vietnam.</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">3, Fried Cicadas</h2>
+                <img src="ima/ve sau.jpg" alt="" class="eatfont">
+                <p class="eatfont">This is a delicacy crafted from fried quail, a bird renowned for its tender meat and
+                    distinct flavor. The dish features
+                    impeccably crispy skin that gives way to succulent, flavorful quail meat. The delectable taste is
+                    enhanced by aromatic
+                    spices, creating a perfect harmony of flavors and textures. Served with a side of fresh herbs and
+                    tangy dipping sauce,
+                    it's an exquisite culinary experience.</p>
+                <p class="eatfont"><b>Price reference:</b> Typically ranges from 100,000 to 200,000 Vietnamese Dong per
+                    serving.</p>
+                <p class="eatfont"><b>Recommended location:</b> Quan 70 Fried Quail - Phieng Luong, Moc Chau, Son La,
+                    Vietnam.
+                </p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">4, Fried Moole Crickets</h2>
+                <img src="ima/boxit.jpg" alt="" class="eatfont">
+                <p class="eatfont">Savor the exquisite taste of crispy fried mole crickets, a local delicacy that
+                    promises a unique culinary adventure.
+                    These meticulously prepared insects offer a satisfying crunch, revealing tender and flavorful meat
+                    inside. Enhanced with
+                    a blend of aromatic spices, each bite is a symphony of flavors that lingers on the palate.
+                    Accompanied by delicate fresh
+                    herbs and a zesty dipping sauce, this dish delivers a one-of-a-kind gastronomic experience.</p>
+                <p class="eatfont"><b>Price range:</b> Typically priced between 80,000 to 150,000 Vietnamese Dong per
+                    serving.
+                </p>
+                <p class="eatfont"><b>Recommended location:</b> Mole Cricket Delights Corner, nestled in the heart of
+                    Phieng
+                    Luong, Moc Chau, Son La, Vietnam.</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">5, Thang Co</h2>
+                <img src="ima/thangco.jpg" alt="" class="eatfont">
+                <p class="eatfont">"Thang Co" horse stew is a longstanding delicacy of the Northwest region in Vietnam.
+                    This specialty is crafted from horse
+                    organs, fresh vegetables, and simmered bones, cooked together with a blend of distinctive spices.
+                    Hang Co features a
+                    deep color, a slightly rich and bitter taste, and is best enjoyed when served hot. It is
+                    particularly beloved by the
+                    H'Mong ethnic community.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 80,000 - 100,000 Vietnamese Dong per bowl.</p>
+                <p class="eatfont"><b>Recommended location:</b> Hang Co LyLy Bac Ha - Nâm Cay 1 Hamlet, Bac Ha Town, Bac
+                    Ha
+                    District, Lao Cai Province.</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">6, Nam Pia </h2>
+                <img src="ima/Nampia.jpg" alt="" class="eatfont">
+                <p class="eatfont">Similar to "Thang Co," "Nam Pia" is also a traditional dish cherished by the Thai
+                    ethnic community in the Northwest
+                    region of Vietnam. Nam Pia is a popular dipping sauce for grilled meat, made from the heart and
+                    young intestines of
+                    animals (mostly goat, buffalo, or cow), which are simmered until tender. Nam Pia boasts an initial
+                    spicy, salty, and
+                    slightly bitter taste followed by a sweet aftertaste.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 30,000 - 50,000 Vietnamese Dong per bowl.</p>
+                <p class="eatfont"><b>Recommended location:</b> Thai village in Moc Chau, where Nam Pia is authentically
+                    prepared and enjoyed.</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">7, Buffalo Skin Salad</h2>
+                <img src="ima/nomdatrau.jpg" alt="" class="eatfont">
+                <p class="eatfont">Buffalo skin salad, a specialty of the Thai ethnic group in Son La, stands out for
+                    its unique blend of flavors. What
+                    distinguishes this dish is not the usual sourness from vinegar or lime, but rather the use of
+                    fermented bamboo shoot
+                    juice. This bamboo shoot juice tenderizes the buffalo skin, giving it a delightful crispiness and
+                    preventing any
+                    overwhelming richness. This exquisite combination has resulted in an exceptional delicacy that
+                    lingers in the memory of
+                    visitors to the Northwest.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 50,000 - 100,000 Vietnamese Dong per plate.</p>
+                <p class="eatfont"><b>Recommended location:</b> Thai villages in Moc Chau, where this dish is
+                    authentically
+                    prepared and savored.</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">8, Wild Buffalo Meat</h2>
+                <img src="ima/trảuung.jpg" alt="" class="eatfont">
+                <p class="eatfont"><b>Wild buffalo</b> hung over the fireplace is a renowned specialty of the Northwest
+                    region
+                    that every visitor must try and
+                    consider bringing home as a gift. Revered as a national delicacy of the Northwest, the wild buffalo
+                    dish truly
+                    encapsulates a distinctive flavor.</p>
+                <p class="eatfont"><b>The buffalo meat</b> selected is typically from the lean muscle, ensuring a firm
+                    and
+                    delicious texture. Simultaneously, the
+                    meat is hung over the fireplace and smoked alongside mac khen seeds. Over time, the meat becomes
+                    evenly cooked and
+                    acquires a natural, unique aroma.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 850,000 Vietnamese Dong per kilogram.</p>
+                <p class="eatfont"><b>Recommended location:</b> 261 Lu Ba Street, Dai Tu, Thai Nguyen, Vietnam.
+                </p>
+
+            </div>
+
+            <div class="doanhehe">
+                <h2 class="eatfont">9, Northwest Glutinous Rice</h2>
+                <img src="ima/riceeee.jpg" alt="" class="eatfont">
+                <p class="eatfont">Northwest glutinous rice is a product that travelers should consider purchasing as a
+                    gift for their families and loved
+                    ones. This glutinous rice variety boasts long, slender grains that, when turned into dishes like
+                    sticky rice, become
+                    incredibly aromatic and delightfully chewy.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 34,000 Vietnamese Dong per kilogram.</p>
+                <p class="eatfont"><b>Recommended locations:</b> Various shops and grocery stores in Dien Bien.</p>
+
+            </div>
+            <div class="doanhehe">
+                <h2 class="eatfont">10, Che</h2>
+                <img src="ima/cehg.jpg" alt="" class="eatfont">
+                <p class="eatfont"><b>Chè</b> is a sweet dessert, served either hot or cold and in the form of a pudding
+                    or
+                    dessert soup. Cold chè is filled with
+                    jellied ingredients and tropical fruits such as bananas, mangoes and longan, usually doused in
+                    coconut cream. Always a
+                    textural adventure, you'll be surprised to encounter coconut shreds, crushed ice, lotus seed and
+                    jellies in these syrupy
+                    snacks. The beautiful three-coloured dessert, chè ba màu is often called the rainbow dessert. This
+                    is a layered
+                    spectacle of red beans, mashed mung beans and pandan jelly, topped with crushed ice and coconut
+                    milk.</p>
+                <p class="eatfont"><b>Price reference:</b> Approximately 20,000 Vietnamese Dong per bowl.</p>
+                <p class="eatfont"><b>Recommended location:</b> Che 95, 95 Hang Bac, Hoan Kiem, Hanoi</p>
+
+            </div>
+
+
+
+        </section>
+        <section class="ending">
+            <div class="phan1">
+                <ul class="Footer">
+                    <li>
+                        <h2 class="h2about">USEFUL LINKS</h2>
+                    </li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Video</a></li>
+                </ul>
+            </div>
+            <div class="phan2">
+                <h2 id="alertone">NEWSLETTER</h2>
+                <input type="text" name="hehe" id="emailhehe" placeholder="Your Email Address">
+                <button id="buttonhehe">SUBSCRIBE NOW</button>
+            </div>
+            <div class="phan3">
+                <h2>CONTACT</h2>
+                <p class="diachinha">9, Vũ Phạm Hàm, Cầu Giấy, Hà Nội, Việt Nam</p>
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/c/amd "> <i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+</body>
+<script>
+    const buttonhehe = document.getElementById('buttonhehe');
+    const alertone = document.getElementById("alertone");
+    const heheInput = document.getElementById("emailhehe");
+
+    buttonhehe.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const heheValue = heheInput.value;
+
+        if (heheValue.length < 6 || !heheValue.includes('@')) {
+            alertone.innerHTML = "Hãy nhập đúng định dạng Email";
+        } else {
+            alertone.innerHTML = "Đã đăng ký thành công";
+            console.log('Email:', heheValue);
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.querySelector('.toggle-button');
+        const showButton = document.querySelector('.show-button');
+        const chatbox = document.querySelector('.chatbox');
+        const aibutton = document.querySelector('.aibutton');
+        const aibutton2 = document.querySelector('.aibutton2');
+        const aibutton3 = document.querySelector('.aibutton3');
+        const aibutton4 = document.querySelector('.aibutton4');
+        const aibutton5 = document.querySelector('.aibutton5');
+        const aibutton6 = document.querySelector('.aibutton6');
+        const aibutton7 = document.querySelector('.aibutton7');
+        const aibutton8 = document.querySelector('.aibutton8');
+        const aibutton9 = document.querySelector('.aibutton9');
+        const aibutton10 = document.querySelector('.aibutton10');
+
+
+
+        const typingText = document.getElementById('typing-text');
+
+
+
+
+
+        toggleButton.addEventListener('click', () => {
+            showButton.style.display = 'flex';
+            chatbox.style.display = 'none';
+
+
+        });
+
+        showButton.addEventListener('click', () => {
+            showButton.style.display = 'none';
+            chatbox.style.display = 'block';
+
+        });
+
+        aibutton.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose the topic that you want";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton2.style.display = 'inline';
+                    aibutton3.style.display = 'inline';
+                }
+            }, 100);
+            aibutton.style.display = 'none';
+
+
+        });
+        window.onload = function () {
+            typingText.innerHTML = "";
+            const text = "Hello, how can I help you?";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton.style.display = 'inline';
+
+                }
+            }, 100);
+
+
+        };
+        aibutton2.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose a specific location";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton4.style.display = 'inline';
+                    aibutton5.style.display = 'inline';
+                    aibutton6.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton2.style.display = 'none';
+            aibutton3.style.display = 'none';
+
+
+
+        });
+        aibutton3.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose a specific cuisine";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton7.style.display = 'inline';
+                    aibutton8.style.display = 'inline';
+                    aibutton9.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton2.style.display = 'none';
+            aibutton3.style.display = 'none';
+
+
+
+        });
+        aibutton4.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Sapa, I recommend visiting Fansipan Mountain";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton5.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Mai Chau, I recommend visiting Pom Coong Village";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton6.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Ha Giang, I recommend visiting Dong Van Karst Plateau Geopark";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton7.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Sapa, I recommend trying Wild Buffalo Meat";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton8.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Mai Chau, I recommend trying Fried Cicadas";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton9.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Ha Giang, I recommend trying Nam Pia";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton10.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Hello, how can I help you?";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton10.style.display = 'none';
+
+        });
+    });
+</script>
+
+</html>

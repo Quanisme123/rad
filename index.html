@@ -1,75 +1,1411 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--doctype html-->
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .login {
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AMD™</title>
+    <link rel="shortcut icon" href="ima/AMD_Arrows.svg" type="image/x-icon">
+    <!--Stylesheet----------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--fav-icon------------------------------------->
+    <link rel="shortcut icon" href="images/fav-icon.svg" />
+    <!--poppins-font-family-------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f9c32690d8.js" crossorigin="anonymous"></script>
+
+        <link rel="shortcut icon" href="ima/AMD_Arrows.svg" type="image/x-icon">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: transparent;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgba(189, 177, 177, 0.15);
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        
+
+        body {
+            background-color: black;
+            background: url(ima/blackw.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .social-menu ul {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .social-menu ul li {
+            list-style: none;
+            margin: 0 10px;
+        }
+
+        .social-menu ul li .fa {
+            color: white;
+            font-size: 25px;
+            line-height: 50px;
+            transition: .5s;
+        }
+
+        .social-menu ul li .fa:hover {
+            color: #ffffff;
+        }
+
+        .social-menu ul li a {
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: goldenrod;
+            text-align: center;
+            transition: 0.5s;
+            transform: translate(0, 0px);
+            box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-menu ul li a:hover {
+            transform: rotate(0deg) skew(0deg) translate(0, -10px);
+        }
+
+        .social-menu ul li:nth-child(1) a:hover {
+            background-color: #4267B2;
+        }
+
+        .social-menu ul li:nth-child(2) a:hover {
+            background-color: #1DA1F2;
+        }
+
+        .social-menu ul li:nth-child(3) a:hover {
+            background-color: #d62976;
+        }
+
+        .social-menu ul li:nth-child(4) a:hover {
+            background-color: #DD0000;
+        }
+
+        .social-menu ul li:nth-child(5) a:hover {
+            background-color: purple;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(12, 3, 52, 0.3), rgba(12, 3, 52, 0.3));
+            position: relative;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero2 {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(12, 3, 52, 0.3), rgba(12, 3, 52, 0.3));
+            position: relative;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav .logo {
+            width: 80px;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 160px;
+            color: white;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .content h1:hover {
+            -webkit-text-stroke: 2px white;
+            color: transparent;
+        }
+
+        .content a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            font-size: 24px;
+            border: 2px solid white;
+            padding: 14px 70px;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: 0.5s;
+        }
+
+        .content a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .content2 {
+            text-align: right;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .content2 h1 {
+            font-size: 60px;
+            color: white;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .content2 p {
+            font-size: 20px;
+            color: white;
+            font-weight: 400;
+            max-width: 14cm;
+            margin-left: auto;
+        }
+
+        .content2 h1:hover {
+            -webkit-text-stroke: 2px white;
+            color: transparent;
+        }
+
+        .content2 a {
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            font-size: 24px;
+            border: 2px solid white;
+            padding: 14px 70px;
+            border-radius: 0px;
+            margin-top: 20px;
+            transition: 0.5s;
+        }
+
+        .content2 a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .backvideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .backvideo2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -2;
+        }
+
+        @media (min-aspect-ratio:16/9) {
+            .backvideo {
+                width: 100%;
+                height: auto;
+            }
+
+            .backvideo2 {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-aspect-ratio:16/9) {
+            .backvideo {
+                width: auto;
+                height: 100%;
+            }
+
+            .backvideo2 {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .social-text {
+            color: black;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .login-box {
+            width: 400px;
+            padding: 40px;
+            background-color: rgb(255, 255, 255, 0.82);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(218, 165, 32, .6);
+            border-radius: 10px;
+            border: 1px maroon solid;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 40px
+        }
+
+        .login-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            color: black;
+            text-align: center;
+        }
+
+        .login-box .user-box {
+            position: relative;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: black;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            background-color: transparent;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            padding: 10px 0;
+            font-size: 12px;
+            transition: 0.5s;
+            cursor: pointer;
+            background-color: transparent;
+            top: -20px;
+            left: 0;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .login-box .user-box input:focus~label {
+            top: -20px;
+            left: 0;
+            color: maroon;
+            font-size: 12px;
+        }
+
+        .login-box form button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: maroon;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 0.5s;
+            margin-top: 40px;
+            letter-spacing: 4px;
+            border: none;
+        }
+
+        .login-box form button:hover {
+            background-color: maroon;
+            color: gold;
+            border-radius: 5px;
+            box-shadow: 0 0 5px maroon,
+                0 0 25px maroon,
+                0 0 50px maroon,
+                0 0 100px maroon;
+        }
+
+        .login-box button span {
+            position: absolute;
+            display: block;
+
+        }
+
+        .login-box button span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, maroon);
+            animation: btn-anim-1 1s linear infinite;
+        }
+
+        @keyframes btn-anim-1 {
+            0% {
+                left: -100%;
+            }
+
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .login-box button span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, maroon);
+            animation: btn-anim-2 1s linear infinite;
+            animation-delay: 0.25s;
+
+        }
+
+        @keyframes btn-anim-2 {
+            0% {
+                top: -100%;
+            }
+
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .login-box button span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, maroon);
+            animation: btn-anim-3 1s linear infinite;
+            animation-delay: 0s;
+        }
+
+        @keyframes btn-anim-3 {
+            0% {
+                right: -100%;
+            }
+
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .login-box button span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(360deg, transparent, maroon);
+            animation: btn-anim-4 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+
+        @keyframes btn-anim-4 {
+            0% {
+                bottom: -100%;
+            }
+
+            50%,
+            100% {
+                bottom: 100%;
+
+            }
+        }
+
+        .textmini {
+            color: transparent;
+        }
+
+        .outside {
+            background-color: rgba(235, 235, 235, 0.85);
+            width: 99vw;
+
+        }
+
+        .wrapper {
+            width: 99vw;
+            height: 320px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: transparent;
+            background-color: transparent;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+        }
+
+
+        .textinbox {
+            font-family: 'Caveat', cursive;
+            display: block;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            font-size: 35px;
+            z-index: 2;
+        }
+
+        .textinbox a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .anhhanoi {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+
+        }
+
+        .box:hover .anhhanoi {
+            transform: scale(1.2);
+        }
+
+        .outside .h1so1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #B2910E;
+            padding-top: 31px;
+        }
+
+        .pso1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            display: block;
+            border-bottom: 10px;
+        }
+
+
+
+
+        .background-buncha {
+            position: relative;
+            background-image: url('ima/best-vietnamese-dishes.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.95;
+
+        }
+
+        .background-buncha .chubuncha {
+            font-size: 80px;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+        }
+
+        .background-buncha .chubuncha2 {
+            font-size: 22px;
+            color: white;
+            text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+            max-width: 50vw;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .chatbox {
+            width: 300px;
+            height: 250px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-family: 'Montserrat', sans-serif;
+            z-index: 999;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s;
+            display: block;
+
+        }
+
+        .chatbox h2 {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+
+        .toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+
+        .support {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 200px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #aibutton {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .aibutton {
+            display: none;
+        }
+
+        .aibutton2 {
+            display: none;
+        }
+
+        .aibutton3 {
+            display: none;
+        }
+
+        .aibutton4 {
+            display: none;
+        }
+
+        .aibutton5 {
+            display: none;
+        }
+
+        .aibutton6 {
+            display: none;
+        }
+
+        .aibutton7 {
+            display: none;
+        }
+
+        .aibutton8 {
+            display: none;
+        }
+
+        .aibutton9 {
+            display: none;
+        }
+
+        .aibutton10 {
+            display: none;
+        }
+
+        .show-button {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-family: 'Montserrat', sans-serif;
+            z-index: 999;
+            border-radius: 5px;
+            text-align: center;
+        }
+         .list-container {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      .list-container ul {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        margin: 0;
+        padding: 0;
+      }
+
+      .list-container li {
+        --img-1: url("ima/dac-san-sapa-7.jpg");
+        --img-2: url("ima/di-lich-cao-nguyen-moc-chau-1.jpg");
+        --img-3: url("ima/pho-den-long-hoi-an-01_1628228734.jpg");
+        --img-4: url("ima/cach-lam-banh-chung-thom-ngon-xanh-deo-dam-da-huong-vi-tet-202209011455226787-1674230031915423470577.jpg");
+        --img-5: url("ima/khu-du-lich-viet-nam-1.jpg");
+
+        &:nth-child(1) {
+          background-image: var(--img-1);
+        }
+        &:nth-child(2) {
+          background-image: var(--img-2);
+        }
+        &:nth-child(3) {
+          background-image: var(--img-3);
+        }
+        &:nth-child(4) {
+          background-image: var(--img-4);
+        }
+        &:nth-child(5) {
+          background-image: var(--img-5);
+        }
+
+        width: 30%;
+        height: 500px;
+        display: table-cell;
+        vertical-align: bottom;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        transition: all 500ms ease;
+      }
+
+      .list-container li div a {
+        display: block;
+        height: 500px;
+        width: 100%;
+        color: #fff;
+        position: relative;
+        z-index: 3;
+        vertical-align: bottom;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Open Sans", sans-serif; /* Thay đổi font family */
+        transition: all 200ms ease;
+      }
+
+      .list-container li div a * {
+        width: 100%;
+        margin: 0;
+        text-overflow: ellipsis;
+        position: relative;
+        z-index: 5;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateX(-20px);
+        transition: all 400ms ease;
+      }
+
+      .list-container li div a h2 {
+        font-family: "Montserrat", sans-serif; /* Thay đổi font family */
+        text-overflow: clip;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+        top: 160px;
+        margin-top: 230px;
+      }
+
+      .list-container li div a p {
+        top: 160px;
+        font-size: 13.5px;
+      }
+
+      .list-container li div a * {
+        opacity: 0;
+      }
+
+      .list-container:hover li {
+        width: 10%;
+      }
+
+      .list-container:hover li:hover {
+        width: 80%;
+      }
+
+      .list-container:hover li:hover a {
+        background: #00000066;
+      }
+
+      .list-container:hover li:hover a * {
+        opacity: 1;
+        transform: translateX(0);
+      }
+.ending {
+        background: url(https://vietnam.travel/themes/custom/vietnamtourism/images/bg-red-pattern.png) 50%;
+        background-size: 100px;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
-        height: 100vh;
+        height: 250px;
     }
 
-    .loginbox {
+    .phan1 .Footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .phan1 .Footer a:hover {
+        text-decoration: underline;
+        color: #D3B22E;
+    }
+
+    .Footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        color: white;
+        line-height: 24px;
+        font-size: 15px;
+        height: 100px;
+
+    }
+
+
+    .phan2,
+    .phan3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        color: white;
+        font-size: 15px;
+        width: 180px;
+        text-align: center;
+    }
+
+    .phan2 h2,
+    .phan3 h2 {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .phan2,
+    .phan3 {
+        margin-right: 0px;
+    }
+
+
+    .social {
+        display: flex;
+        justify-content: space-evenly;
+        width: 150px;
+        list-style: none;
+        margin-right: 0px;
+
+    }
+
+    #emailhehe {
         width: 300px;
-        height: 300px;
-        border: 2px solid black;
-        display: flex;
-        border-radius: 50px;
-        box-shadow: 5px 10px #888888;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input {
-        margin: 10px;
-        padding: 5px;
-        border-radius: 10px;
-    }
-
-    button {
-        border-radius: 10px;
         padding: 10px;
+        border: 2px solid gray;
+        border-radius: 5px;
+        font-size: 16px;
+        list-style: none;
+        display: inline-block;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        background-color: white;
+
+
     }
 
-    .p {
-        display: none;
+    #buttonhehe {
+        padding: 10px;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+        transition: 0.5s;
+
     }
-</style>
+
+    #buttonhehe:hover {
+        background-color: #9E0B0F;
+        border: 2px solid #D3B22E;
+        color: #D3B22E;
+        box-shadow: 0 0 5px #D3B22E,
+            0 0 25px #D3B22E,
+            0 0 50px #D3B22E,
+            0 0 100px #D3B22E;
+
+
+    }
+
+    .phan3 .social li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .phan3 .social li a:hover {
+        text-decoration: none;
+        color: #D3B22E;
+    }
+
+    .diachinha {
+        margin-top: 40px;
+        margin-bottom: 39px;
+
+    }
+    
+    .phan1 .h2about {
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+
+    </style>
+</head>
 
 <body>
-    <section class="login">
-        <div class="loginbox">
-            <form action="">
-                <h1>Login box</h1>
-                <Label>Username</Label>
-                <input type="text" name="" id="username">
-                <Label>Password</Label>
-                <input type="password" id="password">
-                <button type="button" onclick="getinfo()">Submit</button>
-            </form>
+
+    <div class="hero2">
+        <video autoplay loop muted plays-inline class="backvideo2">
+            <source src="ima/0520(1).mp4" type="video/mp4">
+        </video>
+        <nav>
+            <img src="ima/smaller.png" alt="logo">
+            <ul>
+                <li><a href="dulichJSA10 copy.html">HOME</a></li>
+                <li><a href="blog dia diem.html">BEST PLACES</a></li>
+                <li><a href="1.html">BEST FOODS</a></li>
+                <li><a href="environment.html">PROTECT ENVIRONMENT</a></li>
+                <li><a href="https://www.facebook.com/dangminhquan1307">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class=" content2">
+            <h1>Welcome to VietNam</h1>
+            <p> For visitors to Vietnam, it's the moment when you immerse yourself in the vibrant culture
+                and
+                breathtaking landscapes, creating unforgettable memories, and high-quality products that
+                exceed your
+                expectations.</p>
+            <a
+                href="https://vinpearl.com/vi?utm_source=Google_Ad&utm_medium=DM_Team&utm_campaign=20220407_Homepage_Ecom_CPC_ACTIONKEY_haitm9&utm_id=&utm_content=__&gclid=CjwKCAjwvJyjBhApEiwAWz2nLTJOq1pRcX1rLwLCxyy-zMJPJM1Ogax35UdIZEJdaIceMqUCRjaIcRoCXr0QAvD_BwE">Learn
+                More</a>
+        </div>
+    </div>
+    <div class="chatbox">
+        <button class="toggle-button">X</button>
+        <h1>Chat box</h1>
+        <div class="support">
+            <h2><span id="typing-text"></span></h2>
+            <div class="buttonforia">
+                <button id="aibutton" class="aibutton">Get started</button>
+                <button id="aibutton" class="aibutton2">Places Advices</button>
+                <button id="aibutton" class="aibutton3">Foods Advices</button>
+                <button id="aibutton" class="aibutton4">Sapa</button>
+                <button id="aibutton" class="aibutton5">Mai Chau</button>
+                <button id="aibutton" class="aibutton6">Ha Giang</button>
+                <button id="aibutton" class="aibutton7">Sapa</button>
+                <button id="aibutton" class="aibutton8">Mai Chau</button>
+                <button id="aibutton" class="aibutton9">Ha Giang</button>
+                <button id="aibutton" class="aibutton10">Go back</button>
+
+
+            </div>
+
         </div>
 
-    </section>
-    <p class="p">Hello,
-    <p id="testp"></p>
-    </p>
+    </div>
+    <button class="show-button">Show Chat</button>
+    <!--blog-section============================================================================-->
+    <section id="blog">
+        <div class="list-container">
+      <ul>
+        <li>
+          <div>
+            <a href="">
+              <h2>Thịt trâu gác bếp</h2>
+              <p>Đây là một món ăn truyền thống của người dân tộc thiểu số Tây Bắc Việt Nam. Thịt trâu được lựa chọn kỹ lưỡng, sau đó thái thành từng miếng mỏng, ướp với các gia vị như muối, ớt, mắc khén,...
+                 rồi đem hong trên bếp củi trong nhiều giờ. Thịt trâu gác bếp có vị thơm ngon, đậm đà, dai giòn, là món ăn khoái khẩu của nhiều người. </p>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="">
+              <h2>Ruộng bậc thang</h2>
+              <p>Đây là một cảnh quan thiên nhiên đặc sắc của Việt Nam, đặc biệt là ở các tỉnh vùng núi phía Bắc như Lào Cai, Yên Bái, Hà Giang,... Ruộng bậc thang được tạo ra bởi bàn tay cần mẫn của người dân tộc thiểu số, là kết quả của sự kết hợp hài hòa giữa thiên nhiên và con người. Ruộng bậc thang mang vẻ đẹp hùng vĩ, thơ mộng, là một trong những địa điểm du lịch nổi tiếng của Việt Nam. </p>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="">
+              <h2>Phố cổ Hội An</h2>
+              <p>Đây là một di sản văn hóa thế giới được UNESCO công nhận. Phố cổ Hội An nằm ở tỉnh Quảng Nam, là một đô thị cổ kính với những ngôi nhà gỗ, mái ngói âm dương, những con phố nhỏ hẹp, những chiếc đèn lồng nhiều màu sắc. Phố cổ Hội An mang vẻ đẹp cổ kính, yên bình, là một điểm đến du lịch hấp dẫn của du khách trong và ngoài nước. 
+</p>
+            </a>
+          </div>
+        </li>
+         <li>
+          <div>
+            <a href="">
+              <h2>Bánh chưng</h2>
+              <p>Đây là một món ăn truyền thống của người Việt Nam, thường được ăn trong dịp Tết Nguyên Đán. Bánh chưng được làm từ gạo nếp, thịt lợn, đậu xanh, hành lá và gói trong lá dong. Bánh chưng có vị thơm ngon, đậm đà, là món ăn không thể thiếu trong mâm cỗ Tết của người Việt Nam. </p>
+            </a>
+          </div>
+        </li>
+         <li>
+          <div>
+            <a href="">
+              <h2>Vịnh Hạ Long</h2>
+              <p>Đây là một trong bảy kỳ quan thiên nhiên thế giới mới. Vịnh Hạ Long nằm ở tỉnh Quảng Ninh, là một vịnh biển rộng lớn với hàng nghìn hòn đảo lớn nhỏ nhấp nhô. Vịnh Hạ Long mang vẻ đẹp hoang sơ, kỳ vĩ, là một điểm đến du lịch nổi tiếng của Việt Nam. </p>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+            <!--blog-heading--------------->
+        <div class="blog-heading">
+        </div>
+        <section class="background-buncha">
+            <div class="buncha">
+                <h1 class="chubuncha">Explore Viet Nam with the best</h1>
+                <p class="chubuncha2" style="margin-top: -0px;">Viet Nam is not only known for its stunning landscapes
+                    and
+                    rich culture but also for its diverse and mouth-watering cuisine. From street food stalls to fine
+                    dining
+                    restaurants, this country offers a culinary experience that will leave you craving for more.</p>
+            </div>
+        </section>
 
+        <div class="outside">
+            <h1 class=h1so1>MUST-SEE SITES</h1>
+            <p class="pso1">Take a tour of some of the country's most compelling natural wonders and cultural
+                attractions
+                right here.
+            </p>
+            <section class="wrapper">
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Ha Noi</a></h2>
+                    <img class="anhhanoi" src="ima/img-20221008-112850-6795.jpg" alt="">
+                </div>
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Sai Gon</a></h2>
+                    <img class="anhhanoi" src="ima/thumbnailsaigon-1588134021.jpg" alt="">
+                </div>
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Ha Long</a></h2>
+                    <img class="anhhanoi" src="ima/Du-Lich-Vinh-Ha-Long-01.jpg" alt="">
+                </div>
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Hue</a></h2>
+                    <img class="anhhanoi" src="ima/ab1e12ef-852e-4d68-bad8-b6561d6c249c.jpg" alt="">
+                </div>
+
+
+            </section>
+            <section class="wrapper">
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Son La</a></h2>
+                    <img class="anhhanoi" src="ima/di-lich-cao-nguyen-moc-chau-1.jpg" alt="">
+                </div>
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Lang Son</a></h2>
+                    <img class="anhhanoi" src="ima/du-lich-lang-son-13-2-2018-550x355.jpg" alt="">
+                </div>
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Hoa Binh</a></h2>
+                    <img class="anhhanoi" src="ima/C47-TDHB-20221130-01.jpg" alt="">
+                </div>
+                <div class="box">
+                    <h2 class="textinbox"><a href="second AMD.html">Sa pa</a></h2>
+                    <img class="anhhanoi"
+                        src="ima/at_1-dac-diem-ve-cong-troi-sapa--anh-1_d6f76b787633f4afc1dcde90a6bb21e4.jpg" alt="">
+                </div>
+
+
+            </section>
+        </div>
+      <section class="ending">
+            <div class="phan1">
+                <ul class="Footer">
+                    <li>
+                        <h2 class="h2about">USEFUL LINKS</h2>
+                    </li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Video</a></li>
+                </ul>
+            </div>
+            <div class="phan2">
+                <h2 id="alertone">NEWSLETTER</h2>
+                <input type="text" name="hehe" id="emailhehe" placeholder="Your Email Address">
+                <button id="buttonhehe">SUBSCRIBE NOW</button>
+            </div>
+            <div class="phan3">
+                <h2>CONTACT</h2>
+                <p class="diachinha">9, Vũ Phạm Hàm, Cầu Giấy, Hà Nội, Việt Nam</p>
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/c/amd "> <i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </section>
+     
+        
+
+        
 </body>
-<script src="./login.js">
+<script>
 
+   
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.querySelector('.toggle-button');
+        const showButton = document.querySelector('.show-button');
+        const chatbox = document.querySelector('.chatbox');
+        const aibutton = document.querySelector('.aibutton');
+        const aibutton2 = document.querySelector('.aibutton2');
+        const aibutton3 = document.querySelector('.aibutton3');
+        const aibutton4 = document.querySelector('.aibutton4');
+        const aibutton5 = document.querySelector('.aibutton5');
+        const aibutton6 = document.querySelector('.aibutton6');
+        const aibutton7 = document.querySelector('.aibutton7');
+        const aibutton8 = document.querySelector('.aibutton8');
+        const aibutton9 = document.querySelector('.aibutton9');
+        const aibutton10 = document.querySelector('.aibutton10');
+
+
+
+        const typingText = document.getElementById('typing-text');
+
+
+
+
+
+        toggleButton.addEventListener('click', () => {
+            showButton.style.display = 'flex';
+            chatbox.style.display = 'none';
+
+
+        });
+
+        showButton.addEventListener('click', () => {
+            showButton.style.display = 'none';
+            chatbox.style.display = 'block';
+
+        });
+
+        aibutton.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose the topic that you want";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton2.style.display = 'inline';
+                    aibutton3.style.display = 'inline';
+                }
+            }, 100);
+            aibutton.style.display = 'none';
+
+
+        });
+        window.onload = function () {
+            typingText.innerHTML = "";
+            const text = "Hello, how can I help you?";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton.style.display = 'inline';
+
+                }
+            }, 100);
+
+
+        };
+        aibutton2.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose a specific location";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton4.style.display = 'inline';
+                    aibutton5.style.display = 'inline';
+                    aibutton6.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton2.style.display = 'none';
+            aibutton3.style.display = 'none';
+
+
+
+        });
+        aibutton3.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Please choose a specific cuisine";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton7.style.display = 'inline';
+                    aibutton8.style.display = 'inline';
+                    aibutton9.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton2.style.display = 'none';
+            aibutton3.style.display = 'none';
+
+
+
+        });
+        aibutton4.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Sapa, I recommend visiting Fansipan Mountain";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton5.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Mai Chau, I recommend visiting Pom Coong Village";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton6.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Ha Giang, I recommend visiting Dong Van Karst Plateau Geopark";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton4.style.display = 'none';
+            aibutton5.style.display = 'none';
+            aibutton6.style.display = 'none';
+
+
+
+
+        });
+        aibutton7.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Sapa, I recommend trying Wild Buffalo Meat";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton8.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Mai Chau, I recommend trying Fried Cicadas";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton9.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "For Ha Giang, I recommend trying Nam Pia";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton10.style.display = 'inline';
+
+
+                }
+            }, 100);
+            aibutton7.style.display = 'none';
+            aibutton8.style.display = 'none';
+            aibutton9.style.display = 'none';
+
+
+
+
+        });
+        aibutton10.addEventListener('click', () => {
+            typingText.innerHTML = "";
+            const text = "Hello, how can I help you?";
+            let index = 0;
+            const typingInterval = setInterval(() => {
+                typingText.innerHTML += text[index];
+                index++;
+                if (index >= text.length) {
+                    clearInterval(typingInterval);
+                    aibutton.style.display = 'inline';
+
+                }
+            }, 100);
+            aibutton10.style.display = 'none';
+
+        });
+    });
 </script>
 
 </html>

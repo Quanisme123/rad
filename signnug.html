@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .wrapper12 {
+      width: 100%;
+      height: auto;
+      /* position: relative; */
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      z-index: 69;
+      top: 0;
+      left: 0;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Montserrat", sans-serif;
+      border-bottom: 2px solid grey;
+      background-color: rgb(255, 255, 255);
+      height: 100px;
+    }
+
+    nav .logo {
+      width: 80px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color: transparent;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: grey;
+      font-size: 14px;
+    }
+
+    .dropdown {
+      position: absolute;
+      display: none;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      top: 60px;
+      /* Changed from 100% to 30px */
+      left: -20px;
+      width: 200px;
+      text-align: left;
+    }
+
+    .dropdown li {
+      display: block;
+      padding: 10px 20px;
+    }
+
+    .dropdown li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown li a::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 16px;
+      width: 8px;
+      height: 8px;
+      border: 2px solid transparent;
+      border-right-color: #333;
+      border-bottom-color: #333;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    .india .betterqual:hover .dropdown {
+      display: block;
+    }
+
+    .betterqual {
+      height: 100px;
+      align-items: center;
+      display: flex;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .betterqual:hover .navtit {
+      color: white;
+    }
+
+    .betterqual:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .ulqual {
+      margin-left: 20px;
+    }
+
+    .dropdown li a:hover {
+      text-decoration: underline;
+    }
+
+    #login {
+      width: 180px;
+      padding: 10px;
+      border: 2px solid grey;
+      border-radius: 5px;
+      font-size: 16px;
+      list-style: none;
+      display: inline-block;
+      margin-left: 0px;
+      color: grey;
+    }
+
+    #login a:hover {
+      text-decoration: underline;
+    }
+    .login-box {
+      margin-top: 70px;
+      width: 400px;
+      padding: 40px;
+      background-color: rgb(255, 255, 255, 0.7);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      border: 1px white solid;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .login-box h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: Black;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 24px;
+    }
+
+    .login-box .user-box {
+      position: relative;
+    }
+
+    .login-box .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: black;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid black;
+      outline: none;
+      background-color: transparent;
+    }
+
+    .login-box .user-box label {
+      position: absolute;
+      padding: 10px 0;
+      font-size: 12px;
+      transition: 0.5s;
+      cursor: pointer;
+      background-color: transparent;
+      top: -20px;
+      left: 0;
+      color: black;
+    }
+    .login-box .user-box input:focus {
+      outline: none;
+    }
+    .login-box .user-box input:focus ~ label {
+      top: -20px;
+      left: 0;
+      color: #333;
+      font-size: 12px;
+    }
+
+    .login-box form button {
+      padding: 15px 20px 15px 20px;
+      border: solid 1.4px #333;
+      border-radius: 10px;
+      transition: 0.4s;
+      margin-bottom: 20px;
+    }
+
+    .login-box form button:hover {
+      background-color: #333;
+      color: white;
+      box-shadow: 0 0 5px #333, 0 0 25px #333, 0 0 50px #333, 0 0 100px #333;
+    }
+    .login-box form a {
+      color: #333;
+      transition: 0.4s;
+    }
+    .login-box form a:hover {
+      color: #333;
+      text-decoration: none;
+      text-shadow: 0 0 5px #666, 0 0 25px #666, 0 0 50px #666, 0 0 100px #666; /* Moderately lighter shadow */
+    }
+
+    .login-box a span {
+      position: absolute;
+      display: block;
+    }
+
+    .login-wrapper {
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      background: url(ima/Bà-Nà-2.jpg) no-repeat;
+      background-size: cover;
+    }
+    #submitdiv {
+      display: flex;
+      justify-content: center;
+    }
+
+    #userGreeting {
+      /* Your styles for the greeting message here */
+      color: #333; /* Change the color */
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif; /* Change the font-family */
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 140px;
+      position: relative; /* Để sử dụng ::after pseudo-element */
+    }
+
+    #userGreeting::after {
+      content: "..";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: white; /* Nền màu của văn bản */
+      padding: 0 4px; /* Khoảng cách xung quanh ".." */
+    }
+
+    /* Add the class for the link color */
+    #login a,
+    #userGreeting a {
+      color: grey;
+      text-decoration: none;
+    }
+    #logout {
+      width: 60px;
+      padding: 10px;
+      border: 2px solid grey;
+      border-radius: 5px;
+      font-size: 10px;
+      list-style: none;
+      display: inline-block;
+      margin-left: 10px;
+      color: grey;
+      transition: 0.4s;
+    }
+    #logout:hover {
+      color: white;
+      background-color: maroon;
+    }
+  </style>
+
+  <body>
+    <section class="wrapper12">
+      <nav class="india">
+        <img src="ima/smallerx4.png" alt="logo" />
+        <ul class="ulqual">
+          <div class="betterqual">
+            <li>
+              <a href="dulichJSA10 copy.html" class="navtit">Home page</a>
+            </li>
+          </div>
+          <div class="betterqual">
+            <li class="india">
+              <a href="blog dia diem.html" class="navtit">Best Places</a>
+              <ul class="dropdown">
+                <li><a href="#">Son La</a></li>
+                <li><a href="#">Ha Giang</a></li>
+                <li><a href="#">Sapa</a></li>
+                <li><a href="#">Ninh Binh</a></li>
+              </ul>
+            </li>
+          </div>
+          <div class="betterqual">
+            <li class="india">
+              <a href="1.html" class="navtit">Best Foods</a>
+              <ul class="dropdown">
+                <li><a href="#">Street Food</a></li>
+                <li><a href="#">Popoular Food</a></li>
+                <li><a href="#">Sapa</a></li>
+                <li><a href="#">Ha Giang</a></li>
+                <li><a href="#">Lai Chau</a></li>
+              </ul>
+            </li>
+          </div>
+          <div class="betterqual">
+            <li class="india">
+              <a href="environment.html" class="navtit">Protect Environment</a>
+              <ul class="dropdown">
+                <li><a href="#">Why to do?</a></li>
+                <li><a href="#">How to do?</a></li>
+                <li><a href="#">Join us now</a></li>
+                <li><a href="#">Online helps</a></li>
+              </ul>
+            </li>
+          </div>
+          <div class="betterqual">
+            <li class="india">
+              <a href="https://www.facebook.com/dangminhquan1307" class="navtit"
+                >About us</a
+              >
+              <ul class="dropdown">
+                <li><a href="#">Our copyright</a></li>
+                <li><a href="#">Contact for work</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </li>
+          </div>
+          <li>
+            <button id="login" onclick="login()">
+              <a href="./signnug.html">Log In</a> |
+              <a href="./sugnnew.html">Sign Up</a>
+            </button>
+          </li>
+        </ul>
+
+        <p id="userGreeting" style="display: none"></p>
+        <button id="logout" style="display: none">Log Out</button>
+      </nav>
+    </section>
+    <div class="login-wrapper">
+      <div class="login-box">
+        <h2 class="warning">Log In</h2>
+        <form id="form-sign-in" class="">
+          <div class="user-box">
+            <label for="email">Your email</label>
+            <input type="email" id="email" placeholder="" required />
+          </div>
+          <div class="user-box">
+            <label for="password">Your password</label>
+            <input type="password" id="password" required />
+          </div>
+
+          <div class="flex items-center justify-center" id="submitdiv">
+            <button type="submit">Submit</button>
+          </div>
+          <div class="mt-9">
+            Don't have an account yet? <a href="./sugnnew.html"> Sign Up </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Your previous HTML code remains unchanged -->
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+      // Initialize Firebase with your own configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAf8etp89R6Utx9Q2MsCQZBpSI5C4AWutI",
+        authDomain: "continue-3a16b.firebaseapp.com",
+        projectId: "continue-3a16b",
+        storageBucket: "continue-3a16b.appspot.com",
+        messagingSenderId: "85995087957",
+        appId: "1:85995087957:web:5929cd8cc20c27d9534cdc",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const userForm = document.getElementById("form-sign-in");
+      const loginButton = document.querySelector("#login");
+      const userGreeting = document.querySelector("#userGreeting");
+      const logoutButton = document.querySelector("#logout");
+
+      userForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in successfully
+            const user = userCredential.user;
+            console.log(`${user.email} is logged in`);
+            // Add further actions upon successful login
+            loginButton.style.display = "none"; // Ẩn nút đăng nhập
+            userGreeting.style.display = "flex"; // Hiển thị thông báo chào mừng
+            userGreeting.innerHTML = `Hello, <a href="#">${user.email}</a>`; // Hiển thị thông báo chào mừng với username
+            userGreeting.style.color = "grey"; // Hiển thị thông báo chào mừng
+            logoutButton.style.display = "inline-block"; // Hiển thị nút logout
+
+            // Sau khi người dùng đăng nhập thành công
+            localStorage.setItem("loggedInUser", user.email);
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error(errorMessage);
+            // Handle login errors here
+          });
+      });
+      // Xử lý sự kiện khi nút logout được click
+      logoutButton.addEventListener("click", function () {
+        localStorage.removeItem("loggedInUser"); // Xóa thông tin đăng nhập
+        userGreeting.style.display = "none"; // Ẩn greeting message
+        logoutButton.style.display = "none"; // Ẩn nút logout
+        loginButton.style.display = "inline-block"; // Hiển thị nút đăng nhập
+      });
+
+      // Kiểm tra local storage khi trang được load
+      window.onload = function () {
+        const loggedInUser = localStorage.getItem("loggedInUser");
+        const userGreeting = document.querySelector("#userGreeting");
+
+        if (loggedInUser) {
+          // Hiển thị thông tin người dùng đã đăng nhập
+          userGreeting.style.display = "flex";
+          userGreeting.innerHTML = `Hello, <a href="#">${loggedInUser}</a>`;
+          userGreeting.style.color = "grey";
+          logoutButton.style.display = "inline-block"; // Hiển thị nút logout
+          loginButton.style.display = "none"; // Ẩn nút đăng nhập nếu người dùng đã đăng nhập
+        }
+      };
+    </script>
+  </body>
+</html>
