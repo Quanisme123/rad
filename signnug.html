@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="ima/bamboo only.png" type="image/x-icon" />
+
+    <title>ARV</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap"
@@ -32,7 +34,7 @@
       align-items: center;
       justify-content: center;
       font-family: "Montserrat", sans-serif;
-      border-bottom: 2px solid grey;
+      border-bottom: 2px solid #333;
       background-color: rgb(255, 255, 255);
       height: 100px;
     }
@@ -68,7 +70,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: grey;
+      color: #333;
       font-size: 14px;
     }
 
@@ -145,13 +147,13 @@
     #login {
       width: 180px;
       padding: 10px;
-      border: 2px solid grey;
+      border: 2px solid #333;
       border-radius: 5px;
       font-size: 16px;
       list-style: none;
       display: inline-block;
       margin-left: 0px;
-      color: grey;
+      color: #333;
     }
 
     #login a:hover {
@@ -281,19 +283,19 @@
     /* Add the class for the link color */
     #login a,
     #userGreeting a {
-      color: grey;
+      color: #333;
       text-decoration: none;
     }
     #logout {
       width: 60px;
       padding: 10px;
-      border: 2px solid grey;
+      border: 2px solid #333;
       border-radius: 5px;
       font-size: 10px;
       list-style: none;
       display: inline-block;
       margin-left: 10px;
-      color: grey;
+      color: #333;
       transition: 0.4s;
     }
     #logout:hover {
@@ -435,7 +437,7 @@
             loginButton.style.display = "none"; // Ẩn nút đăng nhập
             userGreeting.style.display = "flex"; // Hiển thị thông báo chào mừng
             userGreeting.innerHTML = `Hello, <a href="#">${user.email}</a>`; // Hiển thị thông báo chào mừng với username
-            userGreeting.style.color = "grey"; // Hiển thị thông báo chào mừng
+            userGreeting.style.color = "#333"; // Hiển thị thông báo chào mừng
             logoutButton.style.display = "inline-block"; // Hiển thị nút logout
 
             // Sau khi người dùng đăng nhập thành công
@@ -465,7 +467,7 @@
           // Hiển thị thông tin người dùng đã đăng nhập
           userGreeting.style.display = "flex";
           userGreeting.innerHTML = `Hello, <a href="#">${loggedInUser}</a>`;
-          userGreeting.style.color = "grey";
+          userGreeting.style.color = "#333";
           logoutButton.style.display = "inline-block"; // Hiển thị nút logout
           loginButton.style.display = "none"; // Ẩn nút đăng nhập nếu người dùng đã đăng nhập
         }
